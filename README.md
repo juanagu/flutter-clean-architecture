@@ -2,6 +2,10 @@
 
 Sample of clean architecture on flutter, for big project I recommend to create different modules for domain and data.
 
+# Another samples
+
+ - Firebase datasource: https://github.com/juanagu/flutter-clean-architecture/tree/feature/firebase
+ 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
