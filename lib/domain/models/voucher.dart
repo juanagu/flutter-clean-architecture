@@ -1,6 +1,6 @@
 class Voucher{
 
-  String id;
+  double id;
   String name;
   String imageUrl;
 
