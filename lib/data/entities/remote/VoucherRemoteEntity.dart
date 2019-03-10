@@ -1,7 +1,7 @@
 class VoucherRemoteEntity{
-  var id;
-  var description;
-  var url;
+  double id;
+  String description;
+  String url;
 
   VoucherRemoteEntity.newInstance(this.id, this.description, this.url);
 }

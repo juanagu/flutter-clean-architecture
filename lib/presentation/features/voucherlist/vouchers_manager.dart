@@ -1,4 +1,3 @@
-import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/domain/models/voucher.dart';
 import 'package:flutter_clean_architecture/presentation/commons/no_result_view.dart';
@@ -20,22 +19,10 @@ class VouchersManagerState extends State<VouchersManager>
   final VoucherListViewModel viewModel = VoucherModule.provideModule();
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed) {
-      refresh();
-    }
-  }
-
-  @override
   void initState() {
     super.initState();
-    refresh();
-    Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
-      if (hasConnection(result)) {
-        refresh();
-      }
-    });
     subscribe();
+    refresh();
   }
 
   @override
@@ -73,9 +60,6 @@ class VouchersManagerState extends State<VouchersManager>
   void unsubscribe() {
     WidgetsBinding.instance.removeObserver(this);
   }
-
-  bool hasConnection(ConnectivityResult result) =>
-      result != ConnectivityResult.none;
 
   bool dataHasError(AsyncSnapshot<List<Voucher>> snapshot) => snapshot.hasError;
 

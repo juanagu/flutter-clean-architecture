@@ -8,10 +8,7 @@ class FakeVoucherRemoteDataSource implements VoucherRepository {
 
   @override
   Future<List<Voucher>> getAll() {
-    Future.delayed(Duration(seconds: 2));
-
     List<VoucherRemoteEntity> fakeVouchers = getFakeVouchers();
-
     var vouchers = fakeVouchers.map(VoucherDataMapper.mapper).toList();
 
     return Future<List<Voucher>>.value(vouchers);
