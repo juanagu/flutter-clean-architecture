@@ -1,6 +1,6 @@
 # flutter_clean_architecture
 
-Sample of clean architecture on flutter, for big project I recommend to create different modules for domain and data.
+Sample of clean architecture on flutter, for medium-sized projects see this architecture : https://github.com/juanagu/flutter-clean-architecture-medium
 
 # Another samples
 
